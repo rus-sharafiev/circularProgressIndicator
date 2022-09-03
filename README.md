@@ -1,4 +1,4 @@
-# Material circular progress indicator
+# Circular progress indicator
 
 The SVG implementation of the [Material Design circular progress indicator](https://m3.material.io/components/progress-indicators/specs#b4bf0322-bfe6-4fad-babc-7802c691f135) 
 
