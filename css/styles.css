@@ -91,7 +91,7 @@ footer {
     grid-area: f;
 
     display: grid;
-    grid: 35px 15px / 50px 300px;
+    grid: 35px 15px / 50px 250px;
     align-items: center;
     gap: 0 15px;
 }
@@ -135,10 +135,12 @@ footer > svg {
     margin: 10px;
     border-radius: 30px;
     border: 1px solid var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface);
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    z-index: 10;
 }
 .tools-title {
     padding: 20px;
@@ -329,4 +331,42 @@ input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+@media only screen and (max-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 2) {
+    body {
+        padding: 20px 0;
+        display: grid;
+        grid: 0 35px 100vw repeat(2, min-content) / 1fr;
+        grid-template-areas: 
+            "."
+            "h"
+            "m"
+            "t"
+            "f";
+    }
+    header {
+        position: fixed;
+        justify-self: center;
+        display: grid;
+        grid: 0 15px 20px / 35px 1fr;
+        gap: 0 10px;
+    }
+    header > .subtitle {
+        font-size: 13px;
+    }
+    header > .title {
+        font-size: 23px;
+    }
+    main {
+        position: fixed;
+        top: 55px;
+        width: 100vw;
+        height: 100vw;
+    }
+    footer {
+        margin-top: 20px;
+        grid: 30px 15px / 45px 1fr;
+        justify-self: center;
+    }
 }
